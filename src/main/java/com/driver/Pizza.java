@@ -74,10 +74,13 @@ public class Pizza {
             if (cheese) {
                 bill += "Extra Cheese Added: 80 \n";
             }
-            if (topping && isVeg) {
-                bill += "Extra Toppings Added: 70 \n";
-            } else if (topping && !isVeg) {
-                bill += "Extra Toppings Added: 120 \n";
+            if (topping) {
+                if (isVeg) {
+                    bill += "Extra Toppings Added: 70 \n";
+
+                } else {
+                    bill += "Extra Toppings Added: 120 \n";
+                }
             }
 
             if (takeaway) {
