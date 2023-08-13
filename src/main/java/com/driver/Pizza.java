@@ -6,8 +6,6 @@ public class Pizza {
     private Boolean isVeg;
     private String bill;
 
-    private int totalBill;
-
     boolean cheese;
     boolean topping;
 
@@ -21,7 +19,7 @@ public class Pizza {
             price = 400;
         }
       bill = "Base Price Of The Pizza: "+price+"\n";
-        totalBill+=price;
+
     }
 
     public int getPrice(){
@@ -33,7 +31,7 @@ public class Pizza {
 
 
         if(!cheese){
-            totalBill+=80;
+            price+=80;
             cheese = true;
         }
 
@@ -45,10 +43,10 @@ public class Pizza {
 
 
         if(!topping && isVeg){
-            totalBill+=70;
+            price+=70;
 
         }else if (!topping && !isVeg){
-            totalBill+=120;
+            price+=120;
         }
         topping = true;
     }
@@ -58,7 +56,7 @@ public class Pizza {
 
 
         if(!takeaway){
-            totalBill+=20;
+            price+=20;
         }
     }
 
@@ -78,7 +76,7 @@ public class Pizza {
             if (takeaway) {
                 bill += "Paperbag Added: 20 \n" ;
             }
-            bill+= "Total Price: "+totalBill+"\n";
+            bill+= "Total Price: "+price+"\n";
             billGenerated = true;
         }
 
