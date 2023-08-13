@@ -76,7 +76,8 @@ public class Pizza {
             if (takeaway) {
                 bill += "Paperbag Added: 20 \n" ;
             }
-            bill+= "Total Price: "+price+"\n";
+            String total = Integer.toString(price);
+            bill+= "Total Price: "+total+"\n";
             billGenerated = true;
         }
 
