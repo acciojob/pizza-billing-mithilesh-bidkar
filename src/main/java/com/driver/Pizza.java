@@ -18,7 +18,7 @@ public class Pizza {
         }else {
             price = 400;
         }
-      bill = "Base Price Of The Pizza: "+price+"\n";
+
 
     }
 
@@ -64,6 +64,13 @@ public class Pizza {
         // your code goes here
         boolean billGenerated = false;
         if (!billGenerated) {
+
+            if (isVeg){
+                bill = "Base Price Of The Pizza: 300\n";
+            }else {
+                bill = "Base Price Of The Pizza: 400\n";
+            }
+
             if (cheese) {
                 bill += "Extra Cheese Added: 80 \n";
             }
