@@ -76,7 +76,7 @@ public class Pizza {
             }
 
             if (takeaway) {
-                bill += "Paperbag Added: 20";
+                bill += "Paperbag Added: 20 \n" ;
             }
             bill+= "Total Price: "+totalBill+"\n";
             billGenerated = true;
